@@ -90,6 +90,12 @@ flutter:
       - assets/images/track4.png
       - assets/images/track5.png
       - assets/images/trackmenu.png
+      - assets/images/reminder_menu.png
+      - assets/images/profile_menu.png  
+      - assets/images/trackmenu_split.png
+      - assets/images/scan.png
+      - assets/images/foods.png
+      - assets/images/tips.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

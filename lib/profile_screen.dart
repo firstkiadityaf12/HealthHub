@@ -9,8 +9,19 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Profile Screen'),
       ),
-      body: const Center(
-        child: Text('This is the Profile Screen'),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const SizedBox(height: 20), // Menambahkan jarak antara teks dan gambar
+          Expanded(
+            child: ClipRRect(
+              child: Image.asset(
+                'assets/images/profile_menu.png', // Replace with your image
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

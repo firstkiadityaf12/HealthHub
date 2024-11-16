@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'scan_screen.dart';
 
 class TrackPage extends StatelessWidget {
   const TrackPage({super.key});
@@ -38,29 +39,24 @@ class TrackPage extends StatelessWidget {
                 ],
               ),
             ),
-
             // Section 2: Additional Images Below
             const SizedBox(height: 16), // Spacing between sections
-
-            Image.asset(
-              'assets/images/trackmenu.png', // Replace with your first image
-              height: 600,
-              fit: BoxFit.contain,
+            
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScanPage()),
+                );
+              },
+              child: Image.asset(
+                'assets/images/trackmenu.png', // Replace with your first image
+                height: 600,
+                fit: BoxFit.contain,
+              ),
             ),
+
             const SizedBox(height: 10),
-
-            // Image.asset(
-            //   'assets/images/track2.png', // Replace with your second image
-            //   height: 100,
-            //   fit: BoxFit.contain,
-            // ),
-            // const SizedBox(height: 10),
-
-            // Image.asset(
-            //   'assets/images/track2.png', // Replace with your third image
-            //   height: 100,
-            //   fit: BoxFit.contain,
-            // ),
           ],
         ),
       ),

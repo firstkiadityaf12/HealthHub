@@ -110,13 +110,25 @@ class AlertScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Alert Screen',
-        style: TextStyle(fontSize: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(height: 20), // Menambahkan jarak antara teks dan gambar
+          Expanded(
+            child: ClipRRect(
+              child: Image.asset(
+                'assets/images/reminder_menu.png', // Replace with your image
+                height: 50,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -124,9 +136,20 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(
-        'Profile Screen',
-        style: TextStyle(fontSize: 24),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(height: 20), // Menambahkan jarak antara teks dan gambar
+          Expanded(
+            child: ClipRRect(
+              child: Image.asset(
+                'assets/images/profile_menu.png', // Replace with your image
+                height: 50,
+                fit: BoxFit.contain,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
