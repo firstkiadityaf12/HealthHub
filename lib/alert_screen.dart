@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'homepage_screen.dart';
 import 'alert.dart';
 import 'track_screen.dart';
 import 'profile_screen.dart';
+import 'home_screen.dart';
+import 'tips_screen.dart';
 
 void main() => runApp(const BottomNavigationBarExampleApp());
 
@@ -115,11 +117,20 @@ class AlertScreen extends StatelessWidget {
         children: [
           SizedBox(height: 20), // Menambahkan jarak antara teks dan gambar
           Expanded(
-            child: ClipRRect(
-              child: Image.asset(
-                'assets/images/reminder_menu.png', // Replace with your image
-                height: 50,
-                fit: BoxFit.contain,
+            child: GestureDetector(
+              onTap: () {
+                // Navigates to the home screen when tapped
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Tips()), // Replace HomePage() with HomeScreen()
+                );
+              },
+              child: ClipRRect(
+                child: Image.asset(
+                  'assets/images/reminder_menu.png', // Replace with your image
+                  height: 50,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
           ),
@@ -128,7 +139,6 @@ class AlertScreen extends StatelessWidget {
     );
   }
 }
-
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

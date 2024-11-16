@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'track_screen.dart';
+import 'homepage_screen.dart';
+import 'alert_screen.dart';
 
 class Tips extends StatelessWidget {
     @override
     Widget build(BuildContext context) {
         return Column(
-            backgroundColor: Colors:white,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
                 Image.asset(
@@ -19,7 +19,7 @@ class Tips extends StatelessWidget {
                 onTap: () {
                     Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TrackPage()), // Arahkan ke HomePage
+                    MaterialPageRoute(builder: (context) => BottomNavigationBarExampleApp()), // Arahkan ke HomePage
                     );
                 },
                 child: Container(
